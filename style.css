@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+}
+
+.grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    grid-gap: 10px;
+    height: 100vh;
+}
+
+.grid img {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    cursor: pointer;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-next {
+    position: fixed;
+    cursor: pointer;
+    z-index: 1001;
+    top: 50%;
+    right: 10px;
+    left: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+#btn-next.active {
+    display: flex;
+}
+
+#btn-previous {
+    position: fixed;
+    cursor: pointer;
+    z-index: 1001;
+    top: 50%;
+    left: 10px;
+    right: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+#btn-previous.active {
+    display: flex;
+}
+
+#btn-close {
+    position: fixed;
+    cursor: pointer;
+    z-index: 1001;
+    top: 10px;
+    bottom: auto;
+    right: 10px;
+    left: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 44'%3E%3Cpath d='M0,22L22,0l2.1,2.1L4.2,22l19.9,19.9L22,44L0,22L0,22L0,22z' transform='translate(22.8,0)' fill='%23ffffff'/%3E%3Cpath d='M27,22L27,22L5,44l-2.1-2.1L22.8,22L2.9,2.1L5,0L27,22L27,22z' fill='%23ffffff'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+#btn-close.active {
+    display: flex;
+}
